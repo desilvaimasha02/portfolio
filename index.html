@@ -3,108 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imasha De Silva | Portfolio</title>
+  <title>Imasha De Silva | Software Engineering Intern</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Plus Jakarta Sans / Inter Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">Imasha<span>.dev</span></a>
-      <ul class="nav-menu">
+      
+      <ul class="nav-menu" id="navMenu">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#achievements" class="nav-link">Achievements</a></li>
-        <li><a href="#contact" class="nav-link btn-nav">Contact</a></li>
+        <li><a href="#contact" class="btn btn-pill btn-dark nav-btn">Contact Me</a></li>
       </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="container">
-      <span class="badge">Software Engineering Intern</span>
-      <h1>Hi, I'm <span class="highlight">Imasha De Silva</span></h1>
-      <p class="hero-description">
-        Final-year Software Engineering Undergraduate at SLTC. Combining software development with the elite discipline and resilience of an international athlete.
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="badge-tag">
+        <i class="fas fa-sparkles"></i> Available for Software Engineering Internships
+      </div>
+      
+      <h1 class="hero-title">Building scalable systems with athletic precision.</h1>
+      
+      <p class="hero-subtitle">
+        I’m <strong>Imasha De Silva</strong>, a final-year Software Engineering Undergraduate at SLTC specializing in React, Python, and frontend architecture. Combining clean code with elite international sports discipline.
       </p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View Projects</a>
-        <a href="#contact" class="btn secondary-btn">Contact Me</a>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/desilvaimasha02" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/imasha-desilva" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:desilvaimasha02@gmail.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-  </header>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section-title">About <span>Me</span></h2>
-      <p>
-        I am a final-year Software Engineering undergraduate at SLTC Research University specializing in React, React Native, Python, and modern web architectures.
-      </p>
-      <p>
-        Beyond code, I am an <strong>International Table Tennis Player</strong> and former captain of the SLTC Table Tennis Team. My athletic career has instilled in me high-pressure execution and strategic teamwork.
-      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-pill btn-dark">View Projects <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-pill btn-outline">Get In Touch</a>
+      </div>
+
+      <div class="social-pills">
+        <a href="https://github.com/desilvaimasha02" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/imasha-desilva" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:desilvaimasha02@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
   </section>
 
-  <section id="skills" class="section bg-alt">
+  <!-- About Section -->
+  <section id="about" class="section bg-light">
     <div class="container">
-      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <div class="section-header">
+        <span class="section-badge">Background</span>
+        <h2>About Me</h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Software Engineer</h3>
+          <p>
+            Final-year undergraduate at SLTC Research University specializing in React.js, React Native, Next.js, and Python. Passionate about building modern, user-centric web architectures and micro-services.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="card-icon"><i class="fas fa-trophy"></i></div>
+          <h3>National Athlete</h3>
+          <p>
+            Former Captain of the SLTC Table Tennis Team and International Gold Medalist for Sri Lanka. Brings high-pressure performance, discipline, and strategic teamwork to software engineering.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education Box -->
+      <div class="education-card">
+        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="edu-info">
+          <h3>SLTC Research University — Padukka, Sri Lanka</h3>
+          <p>BSc (Hons) in Software Engineering</p>
+          <span class="edu-date">2023 – 2027 (Expected)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Expertise</span>
+        <h2>Technical Stack</h2>
+      </div>
+
       <div class="skills-grid">
-        <div class="skill-category">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-code"></i></div>
           <h3>Languages</h3>
-          <p>JavaScript, TypeScript, Python, Java, HTML5, CSS3</p>
+          <p class="feature-desc">Python, Java, JavaScript, TypeScript, HTML, CSS</p>
         </div>
-        <div class="skill-category">
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
           <h3>Frameworks</h3>
-          <p>React.js, React Native, Next.js, Tailwind CSS, Flutter</p>
+          <p class="feature-desc">React.js, React Native, Next.js, Tailwind CSS, Flutter</p>
         </div>
-        <div class="skill-category">
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-database"></i></div>
           <h3>Databases & Cloud</h3>
-          <p>PostgreSQL, MySQL, Firebase</p>
+          <p class="feature-desc">PostgreSQL, MySQL, Firebase</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-screwdriver-wrench"></i></div>
+          <h3>Tools & Workflow</h3>
+          <p class="feature-desc">Git, GitHub, Figma, Jira, VS Code, Agile Sprints</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="section">
+  <!-- Featured Projects -->
+  <section id="projects" class="section bg-light">
     <div class="container">
-      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <div class="section-header">
+        <span class="section-badge">Portfolio</span>
+        <h2>Featured Projects</h2>
+      </div>
+
       <div class="projects-grid">
+
+        <!-- Project 1 -->
         <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag">Web & Mobile</span>
+            <a href="https://github.com/desilvaimasha02" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+          </div>
           <h3>UniWork Sri Lanka</h3>
-          <p>Micro-Gig Marketplace Ecosystem</p>
-          <span>React Native, Next.js, PostgreSQL</span>
+          <p class="project-subtitle">Micro-Gig Marketplace Ecosystem</p>
+          <p class="project-text">Designed user flows in Figma and engineered React Native & Next.js frontend components. Managed PostgreSQL schema designs and Agile sprints in Jira.</p>
+          <div class="tech-pills">
+            <span>React Native</span>
+            <span>Next.js</span>
+            <span>PostgreSQL</span>
+            <span>Tailwind CSS</span>
+          </div>
         </div>
+
+        <!-- Project 2 -->
         <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag">IoT & Web</span>
+            <a href="https://github.com/desilvaimasha02" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+          </div>
           <h3>ParkNet</h3>
-          <p>Smart Parking Management System</p>
-          <span>React.js, TypeScript, Firebase</span>
+          <p class="project-subtitle">Smart Parking Management System</p>
+          <p class="project-text">Built responsive React/Tailwind UI modules and linked Firebase to IoT sensors for live slot updates. Handled technical documentation and QA testing.</p>
+          <div class="tech-pills">
+            <span>React.js</span>
+            <span>TypeScript</span>
+            <span>Firebase</span>
+            <span>Tailwind CSS</span>
+          </div>
         </div>
+
+        <!-- Project 3 -->
         <div class="project-card">
+          <div class="project-header">
+            <span class="project-tag">Mobile App</span>
+            <a href="https://github.com/desilvaimasha02" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+          </div>
           <h3>Lankasmartmart</h3>
-          <p>E-Commerce Mobile Application</p>
-          <span>Flutter, Dart</span>
+          <p class="project-subtitle">E-Commerce Mobile Application</p>
+          <p class="project-text">Developed a cross-platform mobile application focused on local product promotion, seamless catalog rendering, and instant cart management.</p>
+          <div class="tech-pills">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Leadership</span>
+        <h2>Sports & Achievements</h2>
+      </div>
+
+      <div class="achievements-list">
+        
+        <div class="achievement-item">
+          <div class="achievement-year">2026</div>
+          <div class="achievement-body">
+            <h3>Captain – SLTC Table Tennis Team</h3>
+            <p>Led squad training and tournament strategy for university competitive events.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-year">2025</div>
+          <div class="achievement-body">
+            <h3>SLTC University Colors Awardee</h3>
+            <p>Awarded top varsity honors for athletic excellence and high academic performance.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-year">2016</div>
+          <div class="achievement-body">
+            <h3>South Asian Championships (Pakistan)</h3>
+            <p><strong>Gold Medal (U15 Singles)</strong> — First Sri Lankan player to win South Asian U15 Gold. Also secured Gold in the U15 Team Event.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-year">2015 – 2018</div>
+          <div class="achievement-body">
+            <h3>South Asian Championships (Regional)</h3>
+            <p>5x Silver Medalist (India, Sri Lanka, Maldives) & 2x Bronze Medalist across regional events.</p>
+          </div>
+        </div>
+
+        <div class="achievement-item">
+          <div class="achievement-year">2012 – 2018</div>
+          <div class="achievement-body">
+            <h3>International Representation</h3>
+            <p>Represented Sri Lanka in Austria (World Hopes Challenge), Malaysia, Thailand, Myanmar, Korea, and Singapore.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <div class="contact-box">
+        <h2>Ready to build something great together?</h2>
+        <p>I am actively seeking Software Engineering Internship opportunities in Sri Lanka. Get in touch with me directly.</p>
+        
+        <div class="contact-buttons">
+          <a href="mailto:desilvaimasha02@gmail.com" class="btn btn-pill btn-dark">Email Me <i class="fas fa-paper-plane"></i></a>
+          <a href="tel:+94776355975" class="btn btn-pill btn-outline">+94 77 635 5975</a>
+        </div>
+
+        <div class="contact-meta">
+          <span><i class="fas fa-location-dot"></i> Colombo, Sri Lanka</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section bg-alt">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <p>Email: desilvaimasha02@gmail.com</p>
-      <p>Phone: +94 77 635 5975</p>
-      <p>Location: Colombo, Sri Lanka</p>
+      <p>&copy; 2026 Imasha De Silva. Crafted with modern web standards.</p>
     </div>
-  </section>
+  </footer>
 
   <script src="script.js"></script>
 </body>
