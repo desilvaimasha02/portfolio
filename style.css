@@ -188,9 +188,23 @@ body {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-pill);
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-dark);
+  font-weight: 5profile-photo-container00;
   margin-bottom: 24px;
+  
+  /* Multi-colored gradient text effect */
+  background-image: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Ensures the icon inherits the text gradient */
+.badge-tag i {
+  color: #a855f7; /* Fallback accent color */
+  background-image: linear-gradient(135deg, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-title {
@@ -338,7 +352,7 @@ body {
   color: var(--text-light);
 }
 
-/* --- Skills Feature Cards (Image 1 Style) --- */
+/* --- Skills Feature Cards --- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -346,18 +360,25 @@ body {
 }
 
 .feature-card {
+  position: relative;
   background-color: var(--bg-card);
   padding: 32px;
   border-radius: var(--radius-card);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  background-clip: padding-box; /* Preserves card background inside rounded border */
 }
 
 .feature-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
-  border-color: var(--border-hover);
+  /* Creates a seamless gradient border effect on hover */
+  border-color: transparent;
+  background-image: linear-gradient(var(--bg-card), var(--bg-card)), 
+                    linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #3b82f6);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .feature-icon {
@@ -605,8 +626,8 @@ body {
 }
 
 .profile-photo {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--bg-main);
