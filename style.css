@@ -479,12 +479,13 @@ body {
 
 .achievement-year {
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   background-color: var(--accent-grey);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
-  min-width: 70px;
+  white-space: nowrap; /* Prevents text from breaking onto a second line */
   text-align: center;
+  flex-shrink: 0; /* Ensures the pill won't shrink */
 }
 
 .achievement-body h3 {
